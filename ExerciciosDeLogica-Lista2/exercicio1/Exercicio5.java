@@ -10,7 +10,7 @@ public class Exercicio5 {
 
 		Scanner sc = new Scanner(System.in);
 
-		Integer a, b, c;
+		Integer a, b, c, aux;
 
 		System.out.println("Entre com um número");
 		a = sc.nextInt();
@@ -25,18 +25,24 @@ public class Exercicio5 {
 		sc.nextLine();
 		
 
-		if(a > b) {
-			
+		if(a > c) {
+			aux = c;
 			c = a;
-			a = b;
-			
-			
+			a = aux;
+		}
+		
+		if(b > c) {
+			aux = c;
+			c = b;
+			b = aux;
+		}
+		if(a > b) {
+			aux = b;
+			b = a;
+			a = aux;
 		}
 
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);
-		
+		System.out.println("Números:"+""+  a +" "+b+" " +c );
 		
 	
 		
